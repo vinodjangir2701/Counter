@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div>
+      <button id="decrement"><i class="fa-solid fa-minus"></i></button>
+      <div>0</div>
+      <button id="incremnet"><i class="fa-solid fa-plus"></i></button>
+      <button id="reset">Reset</i></button>
+    </div>
+
+  </div>
+
+
+  <script>
+    let addValue = document.querySelector('#incremnet');
+    let subValue = document.querySelector('#decrement');
+    let clrValue = document.querySelector('#reset');
+    let numValue = document.querySelector('.wrapper > div > div');
+
+ 
+    let value = Number(numValue.innerText);
+
+
+    addValue.addEventListener("click", function () {
+      numValue.innerHTML = ++value;
+    });
+
+    subValue.addEventListener("click", function () {
+      numValue.innerHTML = --value;
+
+    });
+
+    clrValue.addEventListener("click", function () {
+      value = 0;
+      numValue.innerHTML = value;
+    });
+
+
+  </script>
+
+
+
+
+
+</body>
+
+</html>
